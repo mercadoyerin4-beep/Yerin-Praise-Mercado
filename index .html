@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yerin's Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff7f1;
+            color: #292323;
+        }
+        nav {
+            background: #f6b8c7;
+            padding: 17px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav a {
+            color: #30262a;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+        nav a:hover {
+            color: #a32f59;
+        }
+        .hero {
+            min-height: 430px;
+            padding: 65px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .intro {
+            max-width: 560px;
+        }
+        .intro h1 {
+            font-size: 42px;
+            margin: 8px 0;
+            animation: moveText 2s infinite alternate;
+        }
+        .intro h2 {
+            font-size: 21px;
+            font-weight: normal;
+        }
+        .pink {
+            color: #c94d78;
+            font-weight: bold;
+        }
+        .intro p {
+            color: #655b5b;
+            line-height: 1.7;
+        }
+        .photo-frame {
+            width: 240px;
+            height: 300px;
+            padding: 8px;
+            background: #f6b8c7;
+            border-radius: 12px;
+            box-shadow: 8px 8px 0 #ead9d0;
+            flex-shrink: 0;
+        }
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 8px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 12px;
+            background: #e990aa;
+            color: #2b2024;
+            padding: 11px 17px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background: #f6b8c7;
+        }
+        section {
+            padding: 55px 10%;
+        }
+        section:nth-of-type(even) {
+            background: #fff0f3;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 27px;
+        }
+        .section-text {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 28px;
+            line-height: 1.7;
+            color: #655b5b;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #efd3db;
+            border-radius: 9px;
+            padding: 22px;
+            text-align: center;
+        }
+        .card h3 {
+            color: #b63e68;
+        }
+        .card p {
+            color: #655b5b;
+            line-height: 1.6;
+        }
+        .contact-box {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.9;
+        }
+        footer {
+            background: #2d2428;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+        @keyframes moveText {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-8px);
+            }
+        }
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0 6px;
+            }
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 45px 7%;
+            }
+            .photo-frame {
+                width: 205px;
+                height: 255px;
+            }
+            .intro h1 {
+                font-size: 32px;
+            }
+            section {
+                padding: 42px 7%;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Yerin's Portfolio</div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="intro">
+            <p class="pink">HELLO, WELCOME TO MY PORTFOLIO</p>
+            <h1>Hi, I'm Yerin Praise Mercado</h1>
+            <h2>Aspiring <span class="pink">Computer Science Student</span></h2>
+            <p>
+                I'm a first-year BSCS student learning about coding,
+                web design, and technology. I'm excited to keep learning
+                and improve my skills one step at a time.
+            </p>
+            <a class="button" href="#about">Get to Know Me</a>
+        </div>
+        <div class="photo-frame">
+            <img src="yerin-photo.jpeg" alt="Yerin Praise Mercado">
+        </div>
+    </div>
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-text">
+            My name is Yerin Praise Mercado, and I am a first-year
+            Bachelor of Science in Computer Science student. I am still
+            learning the basics of programming and website development.
+            I enjoy discovering new things and practicing what I learn
+            in class.
+        </p>
+    </section>
+    <section id="skills">
+        <h2 class="section-title">What I'm Learning</h2>
+        <p class="section-text">
+            These are some of the skills I want to develop as I continue my studies.
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Learning how to build the structure of a webpage.</p>
+            </div>
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Practicing colors, layouts, and simple animations.</p>
+            </div>
+            <div class="card">
+                <h3>Programming</h3>
+                <p>Improving my problem-solving skills and learning how code works.</p>
+            </div>
+        </div>
+    </section>
+    <section id="goals">
+        <h2 class="section-title">My Goals</h2>
+        <p class="section-text">
+            I want to become more confident in coding, create my own
+            projects, and learn more about web development. I know it
+            takes practice, so I will keep trying and do my best.
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3>Practice More</h3>
+                <p>Spend time practicing HTML and CSS.</p>
+            </div>
+            <div class="card">
+                <h3>Build a Website</h3>
+                <p>Create more webpages using what I learn in class.</p>
+            </div>
+            <div class="card">
+                <h3>Keep Improving</h3>
+                <p>Learn from mistakes and try new things in technology.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-box">
+            <p>Thank you for visiting my portfolio!</p>
+            <p><strong>Name:</strong> Yerin Praise Mercado</p>
+            <p><strong>Course:</strong> BSCS 1st Year - BKL 2</p>
+        </div>
+    </section>
+    <footer>
+        <p>2026 - Yerin Mercado - Student Portfolio </p>
+    </footer>
+</body>
+</html>
